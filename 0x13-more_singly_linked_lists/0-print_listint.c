@@ -1,10 +1,10 @@
-	#include "lists.h"
+#include "lists.h"
 
 /**
- * print_listint - Characters of a linked list are state
- * @h: Titles to the head of the list
+ * print_listint - Prints all the elements of a listint_t list
+ * @h: Pointer to the head of the list
  *
- * Return: The number of list of the nodes
+ * Return: The number of nodes in the list
  */
 size_t print_listint(const listint_t *h)
 {
@@ -14,7 +14,7 @@ size_t print_listint(const listint_t *h)
 	{
 		printf("%d\n", h->n);
 		h = h->next;
-		ncount ++;
+		ncount++;
 	}
 	return (ncount);
 }
