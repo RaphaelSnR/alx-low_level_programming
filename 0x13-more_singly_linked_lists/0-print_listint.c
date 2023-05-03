@@ -2,9 +2,9 @@
 
 /**
  * print_listint - Characters of a linked list are state
- * @h: Titles of the points
+ * @h: Titles to the head of the list
  *
- * Return: The list of nodes of integers
+ * Return: The number of list of the nodes
  */
 size_t print_listint(const listint_t *h)
 {
