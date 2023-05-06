@@ -6,10 +6,9 @@
 
 /**
  * struct listint_s - singly listed linked	
- * @n: int.
+ * @n: intiger variable
  * @next: points to the next node
  * Description: singly linked list node structure
- * for alx singly_linked project
  */
 
 typedef struct listint_s
