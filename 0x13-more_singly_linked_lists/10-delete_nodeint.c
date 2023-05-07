@@ -3,7 +3,6 @@
 
 /**
  * delete_nodeint_at_index - delete a linked list node
- *
  * of a listint_t linked list.
  * @head: double list point to the first node 
  * @index: Index of the node to delete
