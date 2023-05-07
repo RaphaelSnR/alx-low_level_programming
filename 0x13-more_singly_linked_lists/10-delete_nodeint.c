@@ -2,12 +2,13 @@
 #include <stdlib.h>
 
 /**
- * delete_nodeint_at_index - delete a linked list node
- * of a listint_t linked list.
- * @head: double list point to the first node 
- * @index: Index of the node to delete
+ * delete_nodeint_at_index - delete a link list node
  *
- * Return: point to the 'to be removed' node
+ *        of a listint_t linked list.
+ * @head: Point to the first node in the list
+ * @index: index of the node to delete
+ *
+ * Return: pointer to the 'to be removed' node
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
