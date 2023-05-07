@@ -1,25 +1,43 @@
 #include "lists.h"
-
 /**
- * reverse_listint - reverses a linked list
- * @head:  the first node in the list to point
- * Return: the first node in the new list point
+ * insert_nodeint_at_index - a new node adds to a linked list
+ *                           at a given position
+ * @head : point the head of the list
+ * @idx  : index of the list where the new node will be added
+ *         (indices start at 0)
+ * @n    : a value for  new node to be added
+ * Return: point to the new node,
+ *         or NULL - if function fails
  */
-
-listint_t *reverse_listint(listint_t **head)
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *prev = NULL;
-	listint_t *next = NULL;
+listint_t *new, *temp = *head;
+unsigned int node;
 
-	while (*head)
-	{
-		next = (*head)->next;
-		(*head)->next = prev;
-		prev = *head;
-		*head = next;
-	}
+new = malloc(sizeof(listint_t));
 
-	*head = prev;
+if (new == NULL)
+return (NULL);
 
-	return (*head);
+new->n = n;
+
+if (idx == 0)
+{
+new->next = temp;
+*head = new;
+return (new);
+}
+
+for (node = 0; node < (idx - 1); node++)
+{
+if (temp == NULL || temp->next == NULL)
+return (NULL);
+
+temp = temp->next;
+}
+
+new->next = temp->next;
+temp->next = new;
+
+return (new);
 }
